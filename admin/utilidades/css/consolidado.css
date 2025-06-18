@@ -1,0 +1,94 @@
+/* Estilo general del cuerpo */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f9fc;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Sección tipo banner */
+.hero {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.titulo p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+/* Secciones de tablas */
+section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+/* Tablas */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f1f1f1;
+  color: #333;
+}
+
+tbody tr:hover {
+  background-color: #f9f9f9;
+}
+
+td {
+  color: #555;
+}
+
+/* Botón de volver */
+.boton {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007acc;
+}

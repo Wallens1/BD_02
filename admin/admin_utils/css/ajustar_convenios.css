@@ -1,0 +1,67 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f9fc;
+  color: #333;
+  padding: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+section {
+  background: white;
+  padding: 20px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.campo {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #007acc;
+}

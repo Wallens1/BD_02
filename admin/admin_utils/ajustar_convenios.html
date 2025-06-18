@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ajustar Convenios</title>
+        <link rel="stylesheet" href="./css/ajustar_convenios.css">
+    </head>
+    <body>
+
+        <section class="hero">
+            <h1>Ajustar Convenios</h1>
+            <p>Modificar beneficios y descuentos asociados a una empresa.</p>
+        </section>
+
+        <section class="busqueda">
+            <div class="campo">
+                <label for="empresa">Buscar Empresa:</label>
+                <input type="text" id="empresa"
+                    placeholder="Ingrese el nombre de la empresa...">
+            </div>
+            <button id="confirmarEmpresa">Confirmar Empresa</button>
+        </section>
+
+        <section class="ajustes">
+            <h2>Detalles del Convenio</h2>
+            <div class="campo">
+                <label for="beneficios">Beneficios:</label>
+                <textarea id="beneficios" rows="4"
+                    placeholder="Describa los beneficios del convenio..."></textarea>
+            </div>
+            <div class="campo">
+                <label for="descuento">Descuento (%):</label>
+                <input type="number" id="descuento"
+                    placeholder="Ingrese el porcentaje de descuento">
+            </div>
+            <button id="guardarCambios">Guardar Cambios</button>
+            <button id="eliminarConvenio">Eliminar Convenio</button>
+        </section>
+        <button id="volver" onclick="window.location.href='../admin.html'">Volver</button>
+        
+    </body>
+</html>

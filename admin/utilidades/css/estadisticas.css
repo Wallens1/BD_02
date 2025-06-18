@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f9fc;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.titulo h1 {
+  font-size: 2rem;
+  margin: 0 0 10px 0;
+}
+
+.titulo p {
+  font-size: 1rem;
+  opacity: 0.9;
+}
+
+.resumen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.tarjeta {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.tarjeta h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #007acc;
+}
+
+.graficos {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.grafico-placeholder {
+  background-color: #e6f2ff;
+  border: 2px dashed #a3d3ff;
+  border-radius: 8px;
+  padding: 40px;
+  margin-top: 20px;
+  color: #007acc;
+}
+
+.botones {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4facfe;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #007acc;
+}

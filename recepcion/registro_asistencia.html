@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/registro_asistencia.css">
+        <title>Asistencia</title>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="titulo">
+                <h1>Registro asistencia</h1>
+                <p>registre la asistencia de lo usuarios.</p>
+            </div>
+        </section>
+        <section class="datosPaciente">
+            <div class="estadopaciente">
+                <label for="cedula">Cédula del Paciente:</label>
+                <input type="text" id="cedula"
+                    placeholder="Ingrese la cédula del paciente">
+            </div>
+        </section>
+        <section class="datosConsulta">
+            <div class="datosConsulta">
+                <div class="medico">
+                    <h2>Dr. Juan Perez</h2>
+                    <p>Especialidad: Cardiología</p>
+                    <p>Horario: 9:00 AM - 5:00 PM</p>
+                </div>
+                <label for="fecha">Fecha de la consulta:</label>
+                <input type="date" id="fecha">
+                <label for="hora">Hora de la consulta:</label>
+                <input type="time" id="hora">
+            </div>
+        </section>
+        <section class="pago">
+            <div class="pago">
+                <label for="costo">Costo de la consulta:</label>
+                <input id="costo" value="50.00" readonly>
+                <label for="pago">Pago:</label>
+                <select id="pago">
+                    <option value="efectivo">Efectivo</option>
+                    <option value="tarjeta">Tarjeta de crédito</option>
+                    <option value="transferencia">Transferencia
+                        bancaria</option>
+                </select>
+                <button id="registrarAsistencia">Registrar Asistencia</button>
+            </div>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/citas_registradas.css">
+</head>
+<body>
+    <section class="hero">
+        <div class="titulo">
+            <h1>Salud Vital</h1>
+            <p>Centro de control de citas registradas.</p>
+        </div>
+    </section>
+    <section class="buscarPaciente">
+        <h2>Buscar Paciente</h2>
+        <input type="text" id="searchPaciente" placeholder="Ingrese cedula...">
+        <button id="buscarPacienteBtn">Buscar Paciente</button>
+        <button id="buscarCitas">Buscar Citas</button>
+    </section>
+    <section class="citasRegistradas">
+        <h2>Historial de Citas</h2>
+        <table id="citasTable">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Hora</th>
+                    <th>Medico</th>
+                    <th>Especialidad</th>
+                    <th>Estado</th>
+                    <th>Costo</th>
+                    <th>H Llegada</th>
+                </tr>
+            </thead>
+            <tbody id="citasBody">
+            </tbody>
+        </table>
+
+        <button id="volverBtn" onclick="window.location.href='../admin_utils/utilidades.html'">Volver</button>
+    </section>
+</body>
+</html>

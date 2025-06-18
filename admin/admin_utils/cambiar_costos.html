@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Costos</title>
+        <link rel="stylesheet" href="./css/cambiar_costos.css"/>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="titulo">
+                <h1>Cambiar Costos</h1>
+                <p>Cambio de costos de servicios médicos.</p>
+            </div>
+        </section>
+
+        <section class="datosConsulta">
+            <h2>Por Servicio</h2>
+            <div class="campo">
+                <label for="servicio">Servicio:</label>
+                <select id="servicio">
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Pediatría">Pediatría</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="nuevoCostoServicio">Nuevo Costo:</label>
+                <input type="number" id="nuevoCostoServicio"
+                    placeholder="Ingrese el nuevo costo">
+            </div>
+            <button id="guardarCostoServicio">Guardar Cambios</button>
+            <div class="campo">
+                <label>Costo Actual:</label>
+                <p id="costoActualServicio">$$$$</p>
+            </div>
+        </section>
+
+        <section class="datosEspecialista">
+            <h2>Por Especialista</h2>
+            <div class="campo">
+                <label for="especialista">Especialista:</label>
+                <select id="especialista">
+                    <option value="1">Dr. Jimenez</option>
+                    <option value="2">Dra. Olga</option>
+                    <option value="3">Dr. Toño</option>
+                </select>
+            </div>
+            <div class="campo">
+                <label for="nuevoCostoEspecialista">Nuevo Costo:</label>
+                <input type="number" id="nuevoCostoEspecialista"
+                    placeholder="Ingrese el nuevo costo">
+            </div>
+            <button id="guardarCostoEspecialista">Guardar Cambios</button>
+            <div class="campo">
+                <label>Costo Actual:</label>
+                <p id="costoActualEspecialista">$$$$</p>
+            </div>
+        </section>
+
+        <section class="botones">
+            <div class="boton">
+                <button
+                    onclick="window.location.href='../admin.html'">Volver</button>
+            </div>
+        </section>
+    </body>
+</html>

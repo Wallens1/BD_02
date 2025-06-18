@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/consultar_costos.css">
+        <title>Document</title>
+    </head>
+    <body>
+        <section class="hero">
+            <div class="titulo">
+                <h1>Consultar Costos</h1>
+                <p>Lista de costos de servicios médicos.</p>
+            </div>
+        </section>
+        <section class="datosPaciente">
+            <div class="estadopaciente">
+                <label for="cedula">Cédula del Paciente:</label>
+                <input type="text" id="cedula"
+                    placeholder="Ingrese la cédula del paciente">
+                <div class="beneficios">
+                    <label for="beneficios">Beneficios:</label>
+                    <span id="beneficios">Sin beneficios</span>
+                </div>
+                <div class="estado">
+                    <label>Estado:</label>
+                    <span id="estado">particular</span>
+                </div>
+            </div>
+        </section>
+        <section class="consultaCostos">
+            <div class="servicio">
+                <label for="servicio">Filtrar por servicio:</label>
+                <select id="especialidad">
+                    <option value>Todos</option>
+                    <option value="Cardiología">Cardiología</option>
+                    <option value="Dermatología">Dermatología</option>
+                    <option value="Pediatría">Pediatría</option>
+                </select>
+            </div>
+            <div class="medico">
+                <label for="medico">Filtrar por médico:</label>
+                <input type="text" id="medico"
+                    placeholder="Ingrese el nombre del médico">
+            </div>
+            <div class="fechasDisponibles">
+                <label for="fecha">Filtrar por fecha:</label>
+                <input type="date" id="fecha">
+                <table border="1" style="margin-top:10px;">
+                    <thead>
+                        <tr>
+                            <th>Fechas disponibles</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025-07-10</td>
+                        </tr>
+                        <tr>
+                            <td>2025-07-15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="costoTotal">
+                <div>
+                    <div>
+                        <label>Costo:</label>
+                        <span id="costo">$$$$$.$</span>
+                    </div>
+                    <div>
+                        <label>Descuento:</label>
+                        <span id="descuento">$$$$$.$</span>
+                    </div>
+                    <div>
+                        <label>Total:</label>
+                        <span id="total">$$$$$.$</span>
+                    </div>
+                    <div class="botonescostos">
+                        <button type="button" id="agendar">Agendar</button>
+                        <button type="button" id="volver">Volver</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </body>
+</html>
