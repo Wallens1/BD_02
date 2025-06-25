@@ -75,6 +75,8 @@ router.get('/pendiente/:cedula', async (req, res) => {
   }
 });
 
+
+
 router.put('/asistencia', async (req, res) => {
   const { idConsulta, tipoPago } = req.body;
 
@@ -106,6 +108,30 @@ router.put('/asistencia', async (req, res) => {
     res.status(500).json({ error: 'Error al registrar asistencia' });
   } finally {
     client.release();
+  }
+});
+
+router.get('/historial/:cedula', async (req, res) => {
+  const cedula = req.params.cedula;
+
+  try {
+    const result = await pool.query(`
+      SELECT c.fechahora, c.estado, c.asistio,
+             m.nombre AS nombre_medico,
+             e.nombreespecialidad AS especialidad,
+             t.costoConsulta AS costo
+      FROM consulta c
+      JOIN medico m ON c.idmedico = m.idmedico
+      JOIN especialidad e ON m.idespecialidad = e.idespecialidad
+      JOIN tipo_diversa_consulta t ON c.tipoconsulta = t.tipoconsulta
+      WHERE c.ccpaciente = $1
+      ORDER BY c.fechahora DESC
+    `, [cedula]);
+
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error cargando historial de citas:', err);
+    res.status(500).json({ error: 'Error al consultar historial' });
   }
 });
 

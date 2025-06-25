@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Estadísticas</title>
         <link rel="stylesheet" href="./css/estadisticas.css" />
+        <script defer src="./utilidadesjs/estadisticas.js"></script>
     </head>
     <body>
 
@@ -18,34 +19,38 @@
         <section class="resumen">
             <div class="tarjeta">
                 <h2>Total de Pacientes</h2>
-                <p id="totalPacientes">1,250</p>
+                <p id="totalPacientes">...</p>
             </div>
             <div class="tarjeta">
                 <h2>Citas Hoy</h2>
-                <p id="citasHoy">85</p>
+                <p id="citasHoy">...</p>
             </div>
             <div class="tarjeta">
                 <h2>Ingresos Este Mes</h2>
-                <p id="ingresosMes">$35,000</p>
+                <p id="ingresosMes">...</p>
             </div>
             <div class="tarjeta">
                 <h2>Servicios Más Usados</h2>
-                <p id="serviciosPopulares">Odontología, Pediatría</p>
+                <p id="serviciosPopulares">...</p>
             </div>
         </section>
 
         <section class="graficos">
             <h2>Gráficos Generales</h2>
             <div class="grafico-placeholder">
-                
-                <p>aun no se añaden, esperando db falsa</p>
+                <canvas id="graficoServicios" width="400" height="200"></canvas>
             </div>
         </section>
 
         <section class="botones">
             <button
-                onclick="window.location.href='../admin_utils/utilidades.html'">Volver</button>
+                onclick="window.location.href='../admin_utils/utilidades.html'">
+                Volver
+            </button>
         </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script defer src="./utilidadesjs/estadisticas.js"></script>
 
     </body>
 </html>
