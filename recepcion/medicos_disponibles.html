@@ -1,63 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/medicos_disponibles.css">
-        <title>Medicos</title>
-    </head>
-    <body>
-        <section class="hero">
-            <div class="titulo">
-                <h1>Medicos Disponibles</h1>
-                <p>Lista de medicos disponibles para consultas.</p>
-            </div>
-        </section>
-        <input type="text" id="search" placeholder="Buscar medico...">
-        <div class="filtrarpor">
-            <label for="especialidad">Filtrar por especialidad:</label>
-            <select id="especialidad">
-                <option value>Todos</option>
-                <option value="Cardiología">Cardiología</option>
-                <option value="Dermatología">Dermatología</option>
-                <option value="Pediatría">Pediatría</option>
-            </select>
-        </div>
-        <section class="medicos">
-            <div class="medico">
-                <h2>Dr. Juan Perez</h2>
-                <p>Especialidad: Cardiología</p>
-                <p>Horario: 9:00 AM - 5:00 PM</p>
-            </div>
-            <div class="medico">
-                <h2>Dr. Maria Lopez</h2>
-                <p>Especialidad: Dermatología</p>
-                <p>Horario: 10:00 AM - 6:00 PM</p>
-            </div>
-            <div class="medico">
-                <h2>Dr. Carlos Gomez</h2>
-                <p>Especialidad: Pediatría</p>
-                <p>Horario: 8:00 AM - 4:00 PM</p>
-            </div>
-        </section>
-        <div class="vermas">
-            <button style="margin-top: 20px;">Ver más medicos...</button>
-        </div>
-        <h2>Medicos no disponibles</h2>
-        <section class="noDisponibles">
-            <div class="medicoNoD">
-                <div class="medico">
-                    <h2>Dr. Juan Perez</h2>
-                    <p>Especialidad: Cardiología</p>
-                    <p>Horario: 9:00 AM - 5:00 PM</p>
-                </div>
-            </div>
-        </section>
-        <section class="botones">
-            <div class="boton">
-                <button>Volver</button>
-            </div>
-        </section>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/medicos_disponibles.css">
+  <title>Médicos Disponibles</title>
+</head>
+<body>
+  <section class="hero">
+    <div class="titulo">
+      <h1>Médicos Disponibles</h1>
+      <p>Lista de médicos disponibles para consultas.</p>
+    </div>
+  </section>
 
-    </body>
+  <input type="text" id="search" placeholder="Buscar médico...">
+
+  <div class="filtrarpor">
+    <label for="especialidad">Filtrar por especialidad:</label>
+    <select id="especialidad">
+      <option value="">Todos</option>
+    </select>
+  </div>
+
+  <section class="medicos" id="medicosDisponibles">
+  </section>
+
+  <div class="vermas">
+    <button id="verMasBtn" style="margin-top: 20px;">Ver más médicos...</button>
+  </div>
+
+  <h2>Médicos no disponibles</h2>
+  <section class="noDisponibles" id="medicosNoDisponibles">
+  </section>
+
+  <section class="botones">
+    <div class="boton">
+      <button onclick="window.history.back()">Volver</button>
+    </div>
+  </section>
+
+  <script src="./jsrecepcion/medicos_disponibles.js"></script>
+</body>
 </html>

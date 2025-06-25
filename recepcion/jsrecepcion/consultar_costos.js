@@ -48,22 +48,18 @@ function mostrarFechaDeMedico(fechaISO) {
 }
 
 async function cargarServicios() {
-  const res = await fetch("http://localhost:3000/servicios");
-  const data = await res.json();
-  servicios = data;
+  const res = await fetch('http://localhost:3000/servicios');
+  servicios = await res.json(); 
 
-  const costoSpan = document.getElementById("costo");
-  const descuentoSpan = document.getElementById("descuento");
-  const totalSpan = document.getElementById("total");
+  const total = servicios.reduce((acc, s) => acc + (s.costoservicio || 0), 0);
+  const descuentoAplicado = total * (descuento / 100);
+  const totalFinal = total - descuentoAplicado;
 
-  let costoTotal = servicios.reduce((s, sv) => s + sv.costoservicio, 0);
-  let valorDescuento = costoTotal * (descuento / 100);
-  let totalFinal = costoTotal - valorDescuento;
-
-  costoSpan.textContent = `$${costoTotal.toFixed(2)}`;
-  descuentoSpan.textContent = `$${valorDescuento.toFixed(2)}`;
-  totalSpan.textContent = `$${totalFinal.toFixed(2)}`;
+  document.getElementById('costo').textContent = `$${total.toFixed(2)}`;
+  document.getElementById('descuento').textContent = `$${descuentoAplicado.toFixed(2)}`;
+  document.getElementById('total').textContent = `$${totalFinal.toFixed(2)}`;
 }
+
 
 document.getElementById("cedula").addEventListener("change", async (e) => {
   const cedula = e.target.value;
@@ -74,7 +70,9 @@ document.getElementById("cedula").addEventListener("change", async (e) => {
     document.getElementById("estado").textContent =
       data.nombreaseguradora + " (" + data.categoriapaciente + ")";
     descuento = data.descuento;
-    await cargarServicios(); // Recalcula costos
+
+    await cargarServicios();
+    
   } catch {
     document.getElementById("beneficios").textContent = "Sin beneficios";
     document.getElementById("estado").textContent = "Particular";

@@ -10,7 +10,7 @@ app.use(express.json());
 app.use('/paciente', require('./routes/paciente'));
 app.use('/especialidades', require('./routes/especialidad'));
 app.use('/medicos', require('./routes/medico'));
-app.use('/servicios', require('./routes/medico'));
+app.use('/servicios', require('./routes/servicio'));
 app.use('/consulta', require('./routes/consulta'));
 
 app.listen(port, () => {
