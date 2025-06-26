@@ -19,9 +19,7 @@
             <div class="campo">
                 <label for="servicio">Servicio:</label>
                 <select id="servicio">
-                    <option value="Cardiología">Cardiología</option>
-                    <option value="Dermatología">Dermatología</option>
-                    <option value="Pediatría">Pediatría</option>
+                    <option value="">Seleccione un servicio...</option>
                 </select>
             </div>
             <div class="campo">
@@ -36,33 +34,13 @@
             </div>
         </section>
 
-        <section class="datosEspecialista">
-            <h2>Por Especialista</h2>
-            <div class="campo">
-                <label for="especialista">Especialista:</label>
-                <select id="especialista">
-                    <option value="1">Dr. Jimenez</option>
-                    <option value="2">Dra. Olga</option>
-                    <option value="3">Dr. Toño</option>
-                </select>
-            </div>
-            <div class="campo">
-                <label for="nuevoCostoEspecialista">Nuevo Costo:</label>
-                <input type="number" id="nuevoCostoEspecialista"
-                    placeholder="Ingrese el nuevo costo">
-            </div>
-            <button id="guardarCostoEspecialista">Guardar Cambios</button>
-            <div class="campo">
-                <label>Costo Actual:</label>
-                <p id="costoActualEspecialista">$$$$</p>
-            </div>
-        </section>
-
         <section class="botones">
             <div class="boton">
                 <button
                     onclick="window.location.href='../admin.html'">Volver</button>
             </div>
         </section>
+        
+        <script src="./js/cambiar_costos.js"></script>
     </body>
 </html>

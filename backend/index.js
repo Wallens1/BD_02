@@ -13,6 +13,7 @@ app.use('/medicos', require('./routes/medico'));
 app.use('/servicios', require('./routes/servicio'));
 app.use('/consulta', require('./routes/consulta'));
 app.use('/estadisticas', require('./routes/estadistica'));
+app.use('/aseguradoras', require('./routes/aseguradora'));
 
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
