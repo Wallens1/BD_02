@@ -16,8 +16,6 @@ async function cargarEspecialidades() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', cargarEspecialidades);
-
 // Fetch and populate servicios
 async function cargarServicios() {
   const res = await fetch('http://localhost:3000/servicios');
@@ -37,8 +35,6 @@ async function cargarServicios() {
   });
 }
 
-document.addEventListener('DOMContentLoaded', cargarServicios);
-
 async function cargarMedicosDisponibles(especialidad = "") {
   let url = "http://localhost:3000/medicos?estadomedico=Disponible";
   if (especialidad) {
@@ -56,31 +52,6 @@ async function cargarMedicosDisponibles(especialidad = "") {
   });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  cargarMedicosDisponibles();
-  document.getElementById("especialidad").addEventListener("change", (e) => {
-    cargarMedicosDisponibles(e.target.value);
-  });
-});
-
-document.getElementById("cedula").addEventListener("change", async (e) => {
-  const cedula = e.target.value;
-  try {
-    const res = await fetch(`http://localhost:3000/paciente/${cedula}`);
-    const data = await res.json();
-    // Show insurer in 'beneficios'
-    document.getElementById("beneficios").textContent = data.nombreaseguradora || "Sin aseguradora";
-    // Show status in 'estado'
-    document.getElementById("estado").textContent = data.categoriapaciente || "Sin estado";
-    descuento = data.descuento;
-    // Optionally, update costs or other UI here
-  } catch {
-    document.getElementById("beneficios").textContent = "Sin aseguradora";
-    document.getElementById("estado").textContent = "Sin estado";
-  }
-});
-
-// Place this function near your other functions
 function mostrarHorarioDeMedico(horario) {
   const tbody = document.getElementById("tabla-fechas");
   tbody.innerHTML = "";
@@ -104,29 +75,6 @@ function mostrarHorarioDeMedico(horario) {
   tr.appendChild(td);
   tbody.appendChild(tr);
 }
-
-// Update your medico change event like this:
-document.getElementById("medico").addEventListener("change", async (e) => {
-  const medicoId = e.target.value;
-  const fechasTable = document.getElementById("tabla-fechas");
-  fechasTable.innerHTML = "";
-
-  if (!medicoId) return;
-
-  try {
-    const res = await fetch(`http://localhost:3000/medicos/${medicoId}/fechas`);
-    const fechas = await res.json();
-
-    if (fechas.length === 0) {
-      fechasTable.textContent = "No available dates.";
-      return;
-    }
-
-    mostrarHorarioDeMedico(fechas[0]);
-  } catch {
-    fechasTable.textContent = "Error loading dates.";
-  }
-});
 
 async function actualizarTotal() {
   const selectedIds = Array.from(document.querySelectorAll('input[name="servicio"]:checked')).map(cb => cb.value);
@@ -157,9 +105,52 @@ async function actualizarTotal() {
   document.getElementById('descuento').textContent = descuentoText.toFixed(2);
 }
 
-// Attach to checkbox changes
-document.getElementById('servicios-checkboxes').addEventListener('change', actualizarTotal);
+document.addEventListener('DOMContentLoaded', cargarEspecialidades);
+document.addEventListener('DOMContentLoaded', cargarServicios);
+document.addEventListener("DOMContentLoaded", () => {
+  cargarMedicosDisponibles();
+  document.getElementById("especialidad").addEventListener("change", (e) => {
+    cargarMedicosDisponibles(e.target.value);
+  });
+});
+document.getElementById("cedula").addEventListener("change", async (e) => {
+  const cedula = e.target.value;
+  try {
+    const res = await fetch(`http://localhost:3000/paciente/${cedula}`);
+    const data = await res.json();
+    // Show insurer in 'beneficios'
+    document.getElementById("beneficios").textContent = data.nombreaseguradora || "Sin aseguradora";
+    // Show status in 'estado'
+    document.getElementById("estado").textContent = data.categoriapaciente || "Sin estado";
+    descuento = data.descuento;
+    // Optionally, update costs or other UI here
+  } catch {
+    document.getElementById("beneficios").textContent = "Sin aseguradora";
+    document.getElementById("estado").textContent = "Sin estado";
+  }
+});
+document.getElementById("medico").addEventListener("change", async (e) => {
+  const medicoId = e.target.value;
+  const fechasTable = document.getElementById("tabla-fechas");
+  fechasTable.innerHTML = "";
 
+  if (!medicoId) return;
+
+  try {
+    const res = await fetch(`http://localhost:3000/medicos/${medicoId}/fechas`);
+    const fechas = await res.json();
+
+    if (fechas.length === 0) {
+      fechasTable.textContent = "No available dates.";
+      return;
+    }
+
+    mostrarHorarioDeMedico(fechas[0]);
+  } catch {
+    fechasTable.textContent = "Error loading dates.";
+  }
+});
+document.getElementById('servicios-checkboxes').addEventListener('change', actualizarTotal);
 document.getElementById("agendar").addEventListener("click", async () => {
   const cedula = document.getElementById("cedula").value;
   const medicoId = document.getElementById("medico").value;
