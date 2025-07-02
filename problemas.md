@@ -22,3 +22,20 @@
 
 * El `select` de especialidades no toma los valores de la base de datos
 
+## `consultar_costos.html`
+
+* Un label contiene un `for` que no apunta a ningún elemento
+* El `select` de especialidades no toma los valores de la base de datos
+* No hay un selector de servicios
+* Falta que costo, descuento y total se calculen correctamente
+* Tabla incluya no utilizada
+
+### Problemas pendientes
+
+### Problemas solucionados
+
+* Un label contiene un `for` que no apunta a ningún elemento
+* El `select` de especialidades no toma los valores de la base de datos
+* No hay un selector de servicios
+* Falta que costo, descuento y total se calculen correctamente
+* Tabla incluya no utilizada
