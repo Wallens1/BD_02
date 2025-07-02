@@ -43,11 +43,13 @@
 ## `registro_asistencia.html`
 
 * No tiene boton volver
+* No considera el costo total de consulta y servicios
+* No tiene selector de consultas
 
 ### Problemas pendientes
-
-* Faltan Problemas por detectar
 
 ### Problemas solucionados
 
 * No tiene boton volver
+* No considera el costo total de consulta y servicios
+* No tiene selector de consultas
