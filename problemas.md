@@ -46,7 +46,8 @@
 
 ### Problemas pendientes
 
-* No tiene boton volver
-* - Faltan Problemas por detectar
+* Faltan Problemas por detectar
 
 ### Problemas solucionados
+
+* No tiene boton volver
