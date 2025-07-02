@@ -39,3 +39,14 @@
 * No hay un selector de servicios
 * Falta que costo, descuento y total se calculen correctamente
 * Tabla incluya no utilizada
+
+## `registro_asistencia.html`
+
+* No tiene boton volver
+
+### Problemas pendientes
+
+* No tiene boton volver
+* - Faltan Problemas por detectar
+
+### Problemas solucionados
