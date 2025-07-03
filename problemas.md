@@ -101,3 +101,15 @@
 ### Problemas solucionados
 
 * El boton `buscarPacienteBtn` no funciona
+
+## `consolidado.html`
+
+* Campos de datos innecesarios
+* No existe `consolidado.js` en el repositorio
+
+### Problemas pendientes
+
+### Problemas solucionados
+
+* Campos de datos innecesarios
+* No existe `consolidado.js` en el repositorio

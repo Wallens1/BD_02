@@ -139,5 +139,24 @@ router.get('/historial/:cedula', async (req, res) => {
   }
 });
 
+router.get('/ingresos/mensuales', async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT 
+        TO_CHAR(c.fechahora, 'YYYY-MM') AS mes,
+        SUM(COALESCE(s.costoServicio, 0)) AS ingresos
+      FROM consulta c
+      LEFT JOIN incluya i ON c.idconsulta = i.idconsulta
+      LEFT JOIN servicio s ON i.idservicio = s.idservicio
+      GROUP BY mes
+      ORDER BY mes
+    `);
+
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error fetching monthly incomes:', err);
+    res.status(500).json({ error: 'Error fetching monthly incomes' });
+  }
+});
 
 module.exports = router;
