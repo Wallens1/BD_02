@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     try {
       const res = await fetch(`http://localhost:3000/consulta/pendiente/${cedula}`);
-      if (!res.ok) throw new Error('No consultas found');
+      if (!res.ok) throw new Error('No se encontraron consultas');
       consultas = await res.json();
 
       // Clear previous options
