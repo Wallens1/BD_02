@@ -49,4 +49,31 @@ router.get('/:medicoId/fechas', async (req, res) => {
   }
 });
 
+router.get('/ocupado', async (req, res) => {
+  try {
+    const { especialidad } = req.query;
+    let result;
+    if (especialidad) {
+      result = await pool.query(
+          `SELECT m.idmedico, m.nombre, m.estadomedico, m.horario, e.nombreespecialidad AS especialidad
+           FROM medico m
+                  JOIN especialidad e ON m.idespecialidad = e.idespecialidad
+           WHERE e.nombreespecialidad = $1 AND m.estadomedico = 'Ocupado'`,
+          [especialidad]
+      );
+    } else {
+      result = await pool.query(
+          `SELECT m.idmedico, m.nombre, m.estadomedico, m.horario, e.nombreespecialidad AS especialidad
+           FROM medico m
+                  JOIN especialidad e ON m.idespecialidad = e.idespecialidad
+           WHERE m.estadomedico = 'Ocupado'`
+      );
+    }
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error al obtener médicos', err);
+    res.status(500).json({ error: 'Error al obtener médicos' });
+  }
+});
+
 module.exports = router;

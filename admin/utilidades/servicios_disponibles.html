@@ -16,80 +16,25 @@
             </div>
         </section>
 
-        <section class="Tipo">
-            <div class="campo">
-                <label for="empresa">Buscar Empresa:</label>
-                <input type="text" id="empresa"
-                    placeholder="Ingrese el nombre de la empresa...">
-            </div>
-            <button id="confirmarEmpresa">Confirmar Empresa</button>
-        </section>
-
         <section class="Servicios">
             <h2>Servicios Disponibles</h2>
-            <div class="listaServicios">
-                <div class="servicio">
-                    <h3>Cardiología</h3>
-                    <p>Beneficios: Exámenes cardiacos, consultas
-                        especializadas.</p>
-                </div>
-                <div class="servicio">
-                    <h3>Odontología</h3>
-                    <p>Beneficios: Consultas dentales, limpieza dental.</p>
-                </div>
-                <div class="servicio">
-                    <h3>Dermatología</h3>
-                    <p>Beneficios: Tratamientos de piel, consultas
-                        dermatológicas.</p>
-                </div>
-            </div>
-
-            <div class="campo">
-                <label for="beneficios">Beneficios:</label>
-                <textarea id="beneficios" rows="4"
-                    placeholder="Describa los beneficios del servicio..."></textarea>
-            </div>
-            <button id="guardarCambios">Guardar Cambios</button>
-            <button id="eliminarServicio">Eliminar Servicio</button>
+            <div class="listaServicios"></div>
         </section>
 
         <section class="medicos">
             <h2>Médicos Disponibles</h2>
-            <div class="medico">
-                <h3>Dr. Juan Pérez</h3>
-                <p>Especialidad: Cardiología</p>
-                <p>Horario: 9:00 AM - 5:00 PM</p>
-            </div>
-            <div class="medico">
-                <h3>Dra. María López</h3>
-                <p>Especialidad: Dermatología</p>
-                <p>Horario: 10:00 AM - 6:00 PM</p>
-            </div>
-            <div class="medico">
-                <h3>Dr. Carlos Gómez</h3>
-                <p>Especialidad: Pediatría</p>
-                <p>Horario: 8:00 AM - 4:00 PM</p>
-            </div>
-            <div class="vermas">
-                <button>Ver más médicos...</button>
-            </div>
+            <div class="medicosDisponibles"></div>
         </section>
 
         <section class="noDisponibles">
             <h2>Médicos No Disponibles</h2>
-            <div class="medicoNoD">
-                <div class="medico">
-                    <h3>Dr. Juan Pérez</h3>
-                    <p>Especialidad: Cardiología</p>
-                    <p>Horario: 9:00 AM - 5:00 PM</p>
-                </div>
-            </div>
+            <div class="medicoNoD"></div>
         </section>
 
         <div class="botones">
             <button id="volver"
                 onclick="window.location.href='../admin_utils/utilidades.html'">Volver</button>
         </div>
-
+        <script src="./utilidadesjs/servicios_disponibles.js"></script>
     </body>
 </html>

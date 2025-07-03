@@ -79,3 +79,15 @@
 
 * No existe `ajustar_convenios.js` en el repositorio
 * No existe `aseguradora.js` en el repositorio
+
+## `servicios_disponibles.html`
+
+* Campos de entrada de texto innecesarios
+* No existe `servicios_disponibles.js` en el repositorio
+
+### Problemas pendientes
+
+### Problemas solucionados
+
+* Campos de entrada de texto innecesarios
+* No existe `servicios_disponibles.js` en el repositorio
