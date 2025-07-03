@@ -15,24 +15,30 @@
 
         <section class="busqueda">
             <div class="campo">
-                <label for="empresa">Buscar Empresa:</label>
-                <input type="text" id="empresa"
-                    placeholder="Ingrese el nombre de la empresa...">
+                <label for="aseguradora">Seleccionar Aseguradora:</label>
+                <select id="aseguradora">
+                    <option value="">Seleccione una aseguradora...</option>
+                </select>
             </div>
-            <button id="confirmarEmpresa">Confirmar Empresa</button>
+            <div class="info-actual">
+                <h3>Información Actual</h3>
+                <p><strong>Aseguradora:</strong> <span id="nombreActual">-</span></p>
+                <p><strong>Beneficio Actual:</strong> <span id="beneficioActual">-</span></p>
+                <p><strong>Descuento Actual:</strong> <span id="descuentoActual">-</span></p>
+            </div>
         </section>
 
         <section class="ajustes">
-            <h2>Detalles del Convenio</h2>
+            <h2>Ajustar Convenio</h2>
             <div class="campo">
-                <label for="beneficios">Beneficios:</label>
+                <label for="beneficios">Nuevo Beneficio:</label>
                 <textarea id="beneficios" rows="4"
                     placeholder="Describa los beneficios del convenio..."></textarea>
             </div>
             <div class="campo">
-                <label for="descuento">Descuento (%):</label>
-                <input type="number" id="descuento"
-                    placeholder="Ingrese el porcentaje de descuento">
+                <label for="descuento">Nuevo Descuento (%):</label>
+                <input type="number" id="descuento" min="0" max="100" step="0.01"
+                    placeholder="Ingrese el porcentaje de descuento (0-100)">
             </div>
             <button id="guardarCambios">Guardar Cambios</button>
         </section>
