@@ -67,3 +67,15 @@
 * El documento pide cambiar costos de las consultas, pero solo hay selector de servicios y especialistas
 * No existe `cambiar_costos.js` en el repositorio
 * No existe `tipo_diversa_consulta.js` en el repositorio
+
+## `ajustar_convenios.html`
+
+* No existe `ajustar_convenios.js` en el repositorio
+* No existe `aseguradora.js` en el repositorio
+
+### Problemas pendientes
+
+### Problemas solucionados
+
+* No existe `ajustar_convenios.js` en el repositorio
+* No existe `aseguradora.js` en el repositorio
