@@ -2,8 +2,6 @@ let descuento = 0;
 let servicios = [];
 let fechaSeleccionada = null;
 
-const selected = Array.from(document.querySelectorAll('input[name="servicio"]:checked')).map(cb => cb.value);
-
 async function cargarEspecialidades() {
   const res = await fetch("http://localhost:3000/especialidades");
   const data = await res.json();
