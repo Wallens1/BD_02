@@ -91,3 +91,13 @@
 
 * Campos de entrada de texto innecesarios
 * No existe `servicios_disponibles.js` en el repositorio
+
+## `citas_registradas.html`
+
+* El boton `buscarPacienteBtn` no funciona
+
+### Problemas pendientes
+
+### Problemas solucionados
+
+* El boton `buscarPacienteBtn` no funciona
