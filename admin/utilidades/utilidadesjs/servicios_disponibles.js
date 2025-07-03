@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const date = new Date(medico.horario);
             if (!isNaN(date)) {
                 horarioFormatted = date.toLocaleTimeString('es-CO', {
-                    dateStyle: 'medium',
+                    dataStyle: 'medium',
                     timeStyle: 'short'
                 });
             }
