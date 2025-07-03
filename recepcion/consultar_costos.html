@@ -29,10 +29,10 @@
             </div>
         </section>
         <section class="consultaCostos">
-            <div class="servicio">
-                <label for="servicio">Filtrar por servicio:</label>
+            <div class="especialidad">
+                <label for="especialidad">Filtrar por especialidad:</label>
                 <select id="especialidad">
-                    <option value>Todos</option>
+                    <option value>Todas</option>
                 </select>
             </div>
             <div class="medico">
@@ -54,7 +54,10 @@
                     </tbody>
                 </table>
             </div>
-
+            <div class="servicio">
+                <label>Seleccionar servicios:</label>
+                <div id="servicios-checkboxes"></div>
+            </div>
             <div class="costoTotal">
                 <div>
                     <div>
@@ -71,7 +74,7 @@
                     </div>
                     <div class="botonescostos">
                         <button type="button" id="agendar">Agendar</button>
-                        <button type="button" id="volver">Volver</button>
+                        <button type="button" id="volver" onclick="window.location.href='../index.html'">Volver</button>
                     </div>
                 </div>
             </div>

@@ -54,21 +54,25 @@ router.get('/pendiente/:cedula', async (req, res) => {
     const result = await pool.query(`
       SELECT c.idconsulta, c.fechahora, c.estado, c.asistio, c.observaciones,
              m.nombre AS nombre_medico, e.nombreespecialidad AS especialidad,
-             t.costoConsulta AS costo
+             t.costoConsulta AS costoconsulta,
+             COALESCE(SUM(s.costoServicio), 0) AS total_servicios,
+             (t.costoConsulta + COALESCE(SUM(s.costoServicio), 0)) AS costo
       FROM consulta c
       JOIN medico m ON c.idmedico = m.idmedico
       JOIN especialidad e ON m.idespecialidad = e.idespecialidad
       JOIN tipo_diversa_consulta t ON c.tipoconsulta = t.tipoconsulta
+      LEFT JOIN incluya i ON c.idconsulta = i.idconsulta
+      LEFT JOIN servicio s ON i.idservicio = s.idservicio
       WHERE c.ccpaciente = $1 AND c.asistio = false AND c.estado = 'Pendiente'
+        GROUP BY c.idconsulta, m.nombre, e.nombreespecialidad, t.costoConsulta, c.fechahora, c.estado, c.asistio, c.observaciones
       ORDER BY c.fechahora ASC
-      LIMIT 1
     `, [cedula]);
 
     if (result.rows.length === 0) {
       return res.status(404).json({ error: 'No hay consultas pendientes para este paciente' });
     }
 
-    res.json(result.rows[0]);
+    res.json(result.rows);
   } catch (error) {
     console.error('Error buscando consulta pendiente:', error);
     res.status(500).json({ error: 'Error al buscar consulta pendiente' });
@@ -135,5 +139,24 @@ router.get('/historial/:cedula', async (req, res) => {
   }
 });
 
+router.get('/ingresos/mensuales', async (req, res) => {
+  try {
+    const result = await pool.query(`
+      SELECT 
+        TO_CHAR(c.fechahora, 'YYYY-MM') AS mes,
+        SUM(COALESCE(s.costoServicio, 0)) AS ingresos
+      FROM consulta c
+      LEFT JOIN incluya i ON c.idconsulta = i.idconsulta
+      LEFT JOIN servicio s ON i.idservicio = s.idservicio
+      GROUP BY mes
+      ORDER BY mes
+    `);
+
+    res.json(result.rows);
+  } catch (err) {
+    console.error('Error fetching monthly incomes:', err);
+    res.status(500).json({ error: 'Error fetching monthly incomes' });
+  }
+});
 
 module.exports = router;

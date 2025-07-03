@@ -10,27 +10,27 @@
         <section class="hero">
             <div class="titulo">
                 <h1>Cambiar Costos</h1>
-                <p>Cambio de costos de servicios médicos.</p>
+                <p>Cambio de costos de consultas médicas.</p>
             </div>
         </section>
 
         <section class="datosConsulta">
-            <h2>Por Servicio</h2>
+            <h2>Consultas</h2>
             <div class="campo">
-                <label for="servicio">Servicio:</label>
-                <select id="servicio">
-                    <option value="">Seleccione un servicio...</option>
+                <label for="consulta">Consulta:</label>
+                <select id="consulta" name="consulta">
+                    <option value="">Seleccione un tipo de consulta</option>
                 </select>
             </div>
             <div class="campo">
-                <label for="nuevoCostoServicio">Nuevo Costo:</label>
-                <input type="number" id="nuevoCostoServicio"
+                <label for="nuevoCostoConsulta">Nuevo Costo:</label>
+                <input type="number" id="nuevoCostoConsulta"
                     placeholder="Ingrese el nuevo costo">
             </div>
-            <button id="guardarCostoServicio">Guardar Cambios</button>
+            <button id="guardarCostoConsulta">Guardar Cambios</button>
             <div class="campo">
                 <label>Costo Actual:</label>
-                <p id="costoActualServicio">$$$$</p>
+                <p id="costoActualConsulta">$$$$</p>
             </div>
         </section>
 
@@ -40,7 +40,6 @@
                     onclick="window.location.href='../admin.html'">Volver</button>
             </div>
         </section>
-        
-        <script src="./js/cambiar_costos.js"></script>
+        <script src="./jsadmin_utils/cambiar_costos.js"></script>
     </body>
 </html>
