@@ -22,7 +22,7 @@ router.put('/:tipoconsulta', async (req, res) => {
             [costoconsulta, tipoconsulta]
         );
         if (result.rowCount === 0) {
-            return res.status(404).json({ error: 'Tipo de consulta not found' });
+            return res.status(404).json({ error: 'Tipo de consulta no encontrado' });
         }
         res.json(result.rows[0]);
     } catch (err) {
