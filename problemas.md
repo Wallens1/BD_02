@@ -53,3 +53,17 @@
 * No tiene boton volver
 * No considera el costo total de consulta y servicios
 * No tiene selector de consultas
+
+## `cambiar_costos.html`
+
+* El documento pide cambiar costos de las consultas, pero solo hay selector de servicios y especialistas
+* No existe `cambiar_costos.js` en el repositorio
+* No existe `tipo_diversa_consulta.js` en el repositorio
+
+### Problemas pendientes
+
+### Problemas solucionados
+
+* El documento pide cambiar costos de las consultas, pero solo hay selector de servicios y especialistas
+* No existe `cambiar_costos.js` en el repositorio
+* No existe `tipo_diversa_consulta.js` en el repositorio
