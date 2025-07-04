@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   consultaSelect.addEventListener('change', () => {
     const selectedId = consultaSelect.value;
-    const consulta = consultas.find(c => c.idconsulta === selectedId);
+    const consulta = consultas.find(c => String(c.idconsulta) === selectedId);
     if (consulta) {
       fechaInput.value = consulta.fechahora.slice(0, 10);
       horaInput.value = consulta.fechahora.slice(11, 16);
