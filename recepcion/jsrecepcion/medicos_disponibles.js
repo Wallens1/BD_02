@@ -24,8 +24,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   async function cargarMedicos() {
     try {
       const res = await fetch("http://localhost:3000/medicos");
-      const data = await res.json();
-      todosLosMedicos = data;
+      const resNoDisponibles = await fetch("http://localhost:3000/medicos/ocupado");
+      const dataDisponibles = await res.json();
+      const dataNoDisponibles = await resNoDisponibles.json();
+      todosLosMedicos = [...dataDisponibles, ...dataNoDisponibles];
       filtrarYMostrar();
     } catch (err) {
       console.error("Error cargando médicos", err);
@@ -49,8 +51,8 @@ document.addEventListener("DOMContentLoaded", async () => {
       .getElementById("especialidad")
       .value.toLowerCase();
 
-    const disponibles = document.querySelector(".medicos");
-    const noDisponibles = document.querySelector(".noDisponibles");
+    const disponibles = document.getElementById("medicosDisponibles");
+    const noDisponibles = document.getElementById("medicosNoDisponibles");
 
     disponibles.innerHTML = "";
     noDisponibles.innerHTML = "";
