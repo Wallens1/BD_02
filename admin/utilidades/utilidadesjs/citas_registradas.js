@@ -2,6 +2,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const cedulaInput = document.getElementById('searchPaciente');
   const buscarBtn = document.getElementById('buscarCitas');
   const citasBody = document.getElementById('citasBody');
+  const buscarPacienteBtn = document.getElementById('buscarPacienteBtn');
+
+  buscarPacienteBtn.addEventListener('click', async () => {
+    const cedula = cedulaInput.value.trim();
+    if (!cedula) {
+      alert('Por favor ingresa una cédula');
+      return;
+    }
+
+    try {
+      const res = await fetch(`http://localhost:3000/paciente/${cedula}`);
+      if (res.ok) {
+        alert('Paciente existe');
+      } else {
+        alert('Paciente no existe');
+      }
+    } catch (err) {
+      alert('Paciente no existe');
+    }
+  });
 
   buscarBtn.addEventListener('click', async () => {
     const cedula = cedulaInput.value.trim();

@@ -102,6 +102,27 @@ button:hover {
     transform: scale(1.05);
 }
 
+.botonesasistencia {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.botonesasistencia button {
+    padding: 12px 20px;
+    background-color: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botonesasistencia button:hover {
+    background-color: #0086cc;
+    transform: scale(1.05);
+}
+
 /* Responsive */
 @media (max-width: 600px) {
     .hero h1 {
@@ -110,5 +131,10 @@ button:hover {
 
     section {
         padding: 15px;
+    }
+
+    .botonesasistencia {
+        flex-direction: column;
+        gap: 10px;
     }
 }
