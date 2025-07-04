@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btnRegistrar.addEventListener('click', async () => {
     const selectedId = consultaSelect.value;
-    const consultaPendiente = consultas.find(c => c.idconsulta === selectedId);
+    const consultaPendiente = consultas.find(c => String(c.idconsulta) === selectedId);
     if (!consultaPendiente) {
       alert('Debe cargar una consulta válida.');
       return;

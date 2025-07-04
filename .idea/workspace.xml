@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="192c67c6-4ab0-4c7c-90b8-3e916f87459f" name="Changes" comment="Update `ajustar_convenios.html`: Revamp empresa search input, simplify convenio fields, and adjust section labels.">
+    <list default="true" id="192c67c6-4ab0-4c7c-90b8-3e916f87459f" name="Changes" comment="Add cost calculation for `tipoConsulta` in `consultar_costos.js` and enhance dropdown with dynamic data loading.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recepcion/jsrecepcion/consultar_costos.js" beforeDir="false" afterPath="$PROJECT_DIR$/recepcion/jsrecepcion/consultar_costos.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recepcion/jsrecepcion/registro_asistencia.js" beforeDir="false" afterPath="$PROJECT_DIR$/recepcion/jsrecepcion/registro_asistencia.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +87,8 @@
       <workItem from="1751595020858" duration="31000" />
       <workItem from="1751599795424" duration="746000" />
       <workItem from="1751604474892" duration="460000" />
-      <workItem from="1751607399894" duration="3930000" />
+      <workItem from="1751607399894" duration="4167000" />
+      <workItem from="1751612345972" duration="379000" />
     </task>
     <task id="LOCAL-00001" summary="- Remove duplicate &quot;Consultar Costos&quot; button and replace broken &quot;Agendar cita&quot; button  &#10;- Fix admin login functionality with input validation and redirect logic   &#10;- Add IntelliJ project configurations to .idea directory  &#10;- Document resolved and pending issues in `problemas.md`  &#10;- Update database connection settings in `db.js`">
       <option name="closed" value="true" />
@@ -257,14 +258,21 @@
       <option name="project" value="LOCAL" />
       <updated>1751608934372</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Add cost calculation for `tipoConsulta` in `consultar_costos.js` and enhance dropdown with dynamic data loading.">
+      <option name="closed" value="true" />
+      <created>1751611379613</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1751611379613</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Add project configuration files and update database connection details" />
     <MESSAGE value="- Removed duplicate &quot;Consultar Costos&quot; button in `index.html`.&#10;- Fixed Admin login functionality in `index.html` by adding validation script.&#10;- Updated `.idea` configuration files for project setup and added `.gitignore`.&#10;- Documented resolved issues in `problemas.md`.&#10;- Updated database connection details in `db.js`." />
     <MESSAGE value="- Remove duplicate &quot;Consultar Costos&quot; button and replace broken &quot;Agendar cita&quot; button  &#10;- Fix admin login functionality with input validation and redirect logic   &#10;- Add IntelliJ project configurations to .idea directory  &#10;- Document resolved and pending issues in `problemas.md`  &#10;- Update database connection settings in `db.js`" />
     <MESSAGE value="Add &quot;start&quot; script to backend/package.json" />
@@ -289,6 +297,7 @@
     <MESSAGE value="Add discount logic to `consulta.js` to calculate total cost with insurance discounts." />
     <MESSAGE value="Add dynamic `tipoConsulta` dropdown and validation in `consultar_costos.html` and `consultar_costos.js`." />
     <MESSAGE value="Update `ajustar_convenios.html`: Revamp empresa search input, simplify convenio fields, and adjust section labels." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `ajustar_convenios.html`: Revamp empresa search input, simplify convenio fields, and adjust section labels." />
+    <MESSAGE value="Add cost calculation for `tipoConsulta` in `consultar_costos.js` and enhance dropdown with dynamic data loading." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add cost calculation for `tipoConsulta` in `consultar_costos.js` and enhance dropdown with dynamic data loading." />
   </component>
 </project>
