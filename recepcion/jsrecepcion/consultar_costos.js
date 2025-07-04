@@ -152,7 +152,12 @@ document.getElementById('servicios-checkboxes').addEventListener('change', actua
 document.getElementById("agendar").addEventListener("click", async () => {
   const cedula = document.getElementById("cedula").value;
   const medicoId = document.getElementById("medico").value;
-  const tipoConsulta = "General";
+  const tipoConsulta = document.getElementById("tipoConsulta").value;
+
+  if (!tipoConsulta) {
+    alert("Debes seleccionar un tipo de consulta.");
+    return;
+  }
 
   if (!cedula || !medicoId || !fechaSeleccionada) {
     alert("Debes ingresar todos los datos: cédula, médico y fecha.");
@@ -207,4 +212,29 @@ document.getElementById("agendar").addEventListener("click", async () => {
   } else {
     alert("Error al agendar consulta.");
   }
+});
+
+document.addEventListener("DOMContentLoaded", async () => {
+  // ...existing code...
+
+  const tipoConsultaSelect = document.getElementById("tipoConsulta");
+
+  async function cargarTiposConsulta() {
+    try {
+      const res = await fetch("http://localhost:3000/tipoconsulta");
+      const tipos = await res.json();
+      tipos.forEach(tipo => {
+        const option = document.createElement("option");
+        option.value = tipo.tipoconsulta;
+        option.textContent = tipo.tipoconsulta;
+        tipoConsultaSelect.appendChild(option);
+      });
+    } catch (err) {
+      console.error("Error cargando tipos de consulta", err);
+    }
+  }
+
+  await cargarTiposConsulta();
+
+  // ...rest of your code...
 });
