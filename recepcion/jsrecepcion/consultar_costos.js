@@ -1,6 +1,8 @@
 let descuento = 0;
 let servicios = [];
 let fechaSeleccionada = null;
+let tiposConsulta = [];
+let costoTipoConsulta = 0;
 
 async function cargarEspecialidades() {
   const res = await fetch("http://localhost:3000/especialidades");
@@ -13,6 +15,23 @@ async function cargarEspecialidades() {
     select.appendChild(opt);
   });
 }
+/*
+async function cargarTiposConsulta() {
+  try {
+    const res = await fetch("http://localhost:3000/tipoconsulta");
+    tiposConsulta = await res.json();
+    const tipoConsultaSelect = document.getElementById("tipoConsulta");
+    tiposConsulta.forEach(tipo => {
+      const option = document.createElement("option");
+      option.value = tipo.tipoconsulta;
+      option.textContent = tipo.tipoconsulta;
+      tipoConsultaSelect.appendChild(option);
+    });
+  } catch (err) {
+    console.error("Error cargando tipos de consulta", err);
+  }
+}
+*/
 
 // Fetch and populate servicios
 async function cargarServicios() {
@@ -87,9 +106,11 @@ async function actualizarTotal() {
   const servicios = await res.json();
 
   // Sum costoservicio for selected
-  const costo = servicios
+  const costoSer = servicios
       .filter(s => selectedIds.includes(String(s.idservicio)))
       .reduce((sum, s) => sum + Number(s.costoservicio), 0);
+
+  const costo = costoSer + costoTipoConsulta; // Add cost of tipoConsulta
 
   let descuentoText = 0; // Default to total if no discount
   if (descuento && descuento > 0) {
@@ -172,7 +193,7 @@ document.getElementById("agendar").addEventListener("click", async () => {
   const allServicios = await resServicios.json();
   const selectedServicios = allServicios.filter(s => selectedIds.includes(String(s.idservicio)));
 
-  const total = selectedServicios.reduce((s, sv) => s + Number(sv.costoservicio), 0);
+  const total = selectedServicios.reduce((s, sv) => s + Number(sv.costoservicio), 0) + costoTipoConsulta;
   const descuentoAplicado = total * (descuento / 100);
   const totalFinal = total - descuentoAplicado;
 
@@ -217,13 +238,12 @@ document.getElementById("agendar").addEventListener("click", async () => {
 document.addEventListener("DOMContentLoaded", async () => {
   // ...existing code...
 
-  const tipoConsultaSelect = document.getElementById("tipoConsulta");
-
   async function cargarTiposConsulta() {
     try {
       const res = await fetch("http://localhost:3000/tipoconsulta");
-      const tipos = await res.json();
-      tipos.forEach(tipo => {
+      tiposConsulta = await res.json(); // <-- This line ensures tiposConsulta is populated
+      const tipoConsultaSelect = document.getElementById("tipoConsulta");
+      tiposConsulta.forEach(tipo => {
         const option = document.createElement("option");
         option.value = tipo.tipoconsulta;
         option.textContent = tipo.tipoconsulta;
@@ -237,4 +257,11 @@ document.addEventListener("DOMContentLoaded", async () => {
   await cargarTiposConsulta();
 
   // ...rest of your code...
+});
+
+
+document.getElementById("tipoConsulta").addEventListener("change", (e) => {
+  const selected = tiposConsulta.find(t => t.tipoconsulta == e.target.value);
+  costoTipoConsulta = selected ? Number(selected.costoconsulta) : 0;
+  actualizarTotal();
 });
