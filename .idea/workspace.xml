@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="192c67c6-4ab0-4c7c-90b8-3e916f87459f" name="Changes" comment="Update `medicos_disponibles.js` to include data from unavailable doctors and adjust DOM element references.">
+    <list default="true" id="192c67c6-4ab0-4c7c-90b8-3e916f87459f" name="Changes" comment="Fix `registro_asistencia.js` to correctly identify consultations by converting `idconsulta` to string for comparison.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recepcion/jsrecepcion/registro_asistencia.js" beforeDir="false" afterPath="$PROJECT_DIR$/recepcion/jsrecepcion/registro_asistencia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/consulta.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/consulta.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +85,8 @@
       <workItem from="1751588530146" duration="959000" />
       <workItem from="1751593994599" duration="1008000" />
       <workItem from="1751595020858" duration="31000" />
-      <workItem from="1751599795424" duration="661000" />
+      <workItem from="1751599795424" duration="746000" />
+      <workItem from="1751604474892" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="- Remove duplicate &quot;Consultar Costos&quot; button and replace broken &quot;Agendar cita&quot; button  &#10;- Fix admin login functionality with input validation and redirect logic   &#10;- Add IntelliJ project configurations to .idea directory  &#10;- Document resolved and pending issues in `problemas.md`  &#10;- Update database connection settings in `db.js`">
       <option name="closed" value="true" />
@@ -223,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1751594998291</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Fix `registro_asistencia.js` to correctly identify consultations by converting `idconsulta` to string for comparison.">
+      <option name="closed" value="true" />
+      <created>1751600517988</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1751600517988</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +260,7 @@
     <MESSAGE value="Remove `problemas.md` as resolved and pending issues are now tracked in commit messages and other project documentation." />
     <MESSAGE value="Fix typo in `servicios_disponibles.js` (replace `dataStyle` with `dateStyle` in time formatting options)." />
     <MESSAGE value="Update `medicos_disponibles.js` to include data from unavailable doctors and adjust DOM element references." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update `medicos_disponibles.js` to include data from unavailable doctors and adjust DOM element references." />
+    <MESSAGE value="Fix `registro_asistencia.js` to correctly identify consultations by converting `idconsulta` to string for comparison." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix `registro_asistencia.js` to correctly identify consultations by converting `idconsulta` to string for comparison." />
   </component>
 </project>

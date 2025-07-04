@@ -56,15 +56,18 @@ router.get('/pendiente/:cedula', async (req, res) => {
              m.nombre AS nombre_medico, e.nombreespecialidad AS especialidad,
              t.costoConsulta AS costoconsulta,
              COALESCE(SUM(s.costoServicio), 0) AS total_servicios,
-             (t.costoConsulta + COALESCE(SUM(s.costoServicio), 0)) AS costo
+             COALESCE(a.descuento, 0) AS descuento,
+             ((t.costoConsulta + COALESCE(SUM(s.costoServicio), 0)) * (1 - COALESCE(a.descuento, 0) / 100)) AS costo
       FROM consulta c
-      JOIN medico m ON c.idmedico = m.idmedico
-      JOIN especialidad e ON m.idespecialidad = e.idespecialidad
-      JOIN tipo_diversa_consulta t ON c.tipoconsulta = t.tipoconsulta
-      LEFT JOIN incluya i ON c.idconsulta = i.idconsulta
-      LEFT JOIN servicio s ON i.idservicio = s.idservicio
+             JOIN medico m ON c.idmedico = m.idmedico
+             JOIN especialidad e ON m.idespecialidad = e.idespecialidad
+             JOIN tipo_diversa_consulta t ON c.tipoconsulta = t.tipoconsulta
+             LEFT JOIN incluya i ON c.idconsulta = i.idconsulta
+             LEFT JOIN servicio s ON i.idservicio = s.idservicio
+             JOIN paciente p ON c.ccpaciente = p.ccpaciente
+             LEFT JOIN aseguradora a ON p.idaseguradora = a.idaseguradora
       WHERE c.ccpaciente = $1 AND c.asistio = false AND c.estado = 'Pendiente'
-        GROUP BY c.idconsulta, m.nombre, e.nombreespecialidad, t.costoConsulta, c.fechahora, c.estado, c.asistio, c.observaciones
+      GROUP BY c.idconsulta, m.nombre, e.nombreespecialidad, t.costoConsulta, c.fechahora, c.estado, c.asistio, c.observaciones, a.descuento
       ORDER BY c.fechahora ASC
     `, [cedula]);
 
