@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="192c67c6-4ab0-4c7c-90b8-3e916f87459f" name="Changes" comment="Fix typo in `servicios_disponibles.js` (replace `dataStyle` with `dateStyle` in time formatting options)." />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="1-revision" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2zI9gb7L9i3765IjLUWqYwf66PT" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Node.js.Unnamed.executor": "Run",
+    "Node.js.index.js.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "/home/tsuna/.local/share/JetBrains/Toolbox/apps/webstorm/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/admin/utilidades/utilidadesjs" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-WS-251.26927.40" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="192c67c6-4ab0-4c7c-90b8-3e916f87459f" name="Changes" comment="" />
+      <created>1751407832970</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1751407832970</updated>
+      <workItem from="1751407836453" duration="14638000" />
+      <workItem from="1751471114801" duration="10561000" />
+      <workItem from="1751513030393" duration="10856000" />
+      <workItem from="1751588457243" duration="54000" />
+    </task>
+    <task id="LOCAL-00001" summary="- Remove duplicate &quot;Consultar Costos&quot; button and replace broken &quot;Agendar cita&quot; button  &#10;- Fix admin login functionality with input validation and redirect logic   &#10;- Add IntelliJ project configurations to .idea directory  &#10;- Document resolved and pending issues in `problemas.md`  &#10;- Update database connection settings in `db.js`">
+      <option name="closed" value="true" />
+      <created>1751409121436</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1751409121436</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add &quot;start&quot; script to backend/package.json">
+      <option name="closed" value="true" />
+      <created>1751409328479</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1751409328479</updated>
+    </task>
+    <task id="LOCAL-00003" summary="- Document resolved issues for `medicos_disponibles.html` and add pending problems  &#10;- Update database connection to accept SSL">
+      <option name="closed" value="true" />
+      <created>1751410301664</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1751410301664</updated>
+    </task>
+    <task id="LOCAL-00004" summary="- Implement service selector, cost calculation, and medico schedule filtering in `consultar_costos.html`  &#10;- Add backend routes for fetching medico schedules and filtering by specialty  &#10;- Update frontend logic for services display and dynamic cost calculation  &#10;- Document resolved issues for `consultar_costos.html` in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751430862603</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1751430862603</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Add &quot;Volver&quot; button to `registro_asistencia.html`, update styles, and document resolved issue in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751432295873</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1751432295873</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Document resolved issue in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751432319967</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1751432319967</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Refactor event listeners in `consultar_costos.js` for improved code organization and readability.">
+      <option name="closed" value="true" />
+      <created>1751472449856</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1751472449856</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Add consultation selector and total cost calculation in `registro_asistencia.html`&#10;- Update backend route for pending consultations with detailed cost breakdown&#10;- Implement dynamic consultation data loading in `registro_asistencia.js`&#10;- Document resolved and pending issues for `registro_asistencia.html` in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751498148262</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1751498148262</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Add consultation cost update functionality in `cambiar_costos.html` with backend integration and dynamic data loading">
+      <option name="closed" value="true" />
+      <created>1751515810489</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1751515810489</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- Add `ajustar_convenios.js` to handle convenio adjustments and integrate with backend&#10;- Implement backend route `aseguradora.js` for convenio retrieval and updates&#10;- Link `ajustar_convenios.js` in `ajustar_convenios.html`&#10;- Document resolved issues for `ajustar_convenios.html` in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751520319682</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1751520319682</updated>
+    </task>
+    <task id="LOCAL-00011" summary="- Replace static content in `servicios_disponibles.html` with dynamic data loading via `servicios_disponibles.js`&#10;- Add backend route `/medicos/ocupado` for fetching unavailable doctors&#10;- Document resolved issues in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751522945039</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1751522945039</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Add click event for `buscarPacienteBtn` in `citas_registradas.js` and document resolved issue in `problemas.md`">
+      <option name="closed" value="true" />
+      <created>1751523345672</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1751523345672</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Add dynamic data loading for monthly incomes in `consolidado.html` with `consolidado.js` integration, backend route `/ingresos/mensuales`, and document resolved issues in `problemas.md`.">
+      <option name="closed" value="true" />
+      <created>1751523883649</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1751523883649</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Remove `problemas.md` as resolved and pending issues are now tracked in commit messages and other project documentation.">
+      <option name="closed" value="true" />
+      <created>1751523931621</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1751523931621</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Fix typo in `servicios_disponibles.js` (replace `dataStyle` with `dateStyle` in time formatting options).">
+      <option name="closed" value="true" />
+      <created>1751524650324</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1751524650324</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add project configuration files and update database connection details" />
+    <MESSAGE value="- Removed duplicate &quot;Consultar Costos&quot; button in `index.html`.&#10;- Fixed Admin login functionality in `index.html` by adding validation script.&#10;- Updated `.idea` configuration files for project setup and added `.gitignore`.&#10;- Documented resolved issues in `problemas.md`.&#10;- Updated database connection details in `db.js`." />
+    <MESSAGE value="- Remove duplicate &quot;Consultar Costos&quot; button and replace broken &quot;Agendar cita&quot; button  &#10;- Fix admin login functionality with input validation and redirect logic   &#10;- Add IntelliJ project configurations to .idea directory  &#10;- Document resolved and pending issues in `problemas.md`  &#10;- Update database connection settings in `db.js`" />
+    <MESSAGE value="Add &quot;start&quot; script to backend/package.json" />
+    <MESSAGE value="- Update SSL settings in `db.js` and document resolved issue with `select` in `problemas.md`" />
+    <MESSAGE value="- Document resolved issues for `medicos_disponibles.html` and add pending problems  &#10;- Update database connection to accept SSL" />
+    <MESSAGE value="- Implement service selector, cost calculation, and medico schedule filtering in `consultar_costos.html`  &#10;- Add backend routes for fetching medico schedules and filtering by specialty  &#10;- Update frontend logic for services display and dynamic cost calculation  &#10;- Document resolved issues for `consultar_costos.html` in `problemas.md`" />
+    <MESSAGE value="Add &quot;Volver&quot; button to `registro_asistencia.html`, update styles, and document resolved issue in `problemas.md`" />
+    <MESSAGE value="Document resolved issue in `problemas.md`" />
+    <MESSAGE value="Add hidden &quot;Selecciona la consulta&quot; dropdown to `registro_asistencia.html` for future functionality" />
+    <MESSAGE value="Add hidden &quot;Selecciona la consulta&quot; dropdown to `registro_asistencia.html`" />
+    <MESSAGE value="Refactor event listeners in `consultar_costos.js` for improved code organization and readability." />
+    <MESSAGE value="- Add consultation selector and total cost calculation in `registro_asistencia.html`&#10;- Update backend route for pending consultations with detailed cost breakdown&#10;- Implement dynamic consultation data loading in `registro_asistencia.js`&#10;- Document resolved and pending issues for `registro_asistencia.html` in `problemas.md`" />
+    <MESSAGE value="Add consultation cost update functionality in `cambiar_costos.html` with backend integration and dynamic data loading" />
+    <MESSAGE value="- Add `ajustar_convenios.js` to handle convenio adjustments and integrate with backend&#10;- Implement backend route `aseguradora.js` for convenio retrieval and updates&#10;- Link `ajustar_convenios.js` in `ajustar_convenios.html`&#10;- Document resolved issues for `ajustar_convenios.html` in `problemas.md`" />
+    <MESSAGE value="- Replace static content in `servicios_disponibles.html` with dynamic data loading via `servicios_disponibles.js`&#10;- Add backend route `/medicos/ocupado` for fetching unavailable doctors&#10;- Document resolved issues in `problemas.md`" />
+    <MESSAGE value="Add click event for `buscarPacienteBtn` in `citas_registradas.js` and document resolved issue in `problemas.md`" />
+    <MESSAGE value="Add dynamic data loading for monthly incomes in `consolidado.html` with `consolidado.js` integration, backend route `/ingresos/mensuales`, and document resolved issues in `problemas.md`." />
+    <MESSAGE value="Remove `problemas.md` as resolved and pending issues are now tracked in commit messages and other project documentation." />
+    <MESSAGE value="Fix typo in `servicios_disponibles.js` (replace `dataStyle` with `dateStyle` in time formatting options)." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix typo in `servicios_disponibles.js` (replace `dataStyle` with `dateStyle` in time formatting options)." />
+  </component>
+</project>
